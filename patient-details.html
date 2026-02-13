@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rehab360 | Patient Details</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script defer src="JS/script.js"></script>
+</head>
+
+<body data-page="patient-details">
+
+    <!-- SAME TOPBAR AS PHYSIO HOME -->
+    <header class="topbar">
+        <section class="shell" aria-label="Top bar content">
+            <h1 class="brand">
+                <a class="brand-link" href="physio-home.html" aria-label="Rehab360 home">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-name">Rehab360</span>
+                </a>
+            </h1>
+
+            <!-- NAV: תפריט חשוב (פעולות עליונות) -->
+            <nav class="top-actions" aria-label="Top actions">
+                <a class="icon-btn" href="#" data-tip="Not implemented (demo)" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 22a2.2 2.2 0 0 0 2.2-2.2h-4.4A2.2 2.2 0 0 0 12 22Zm7-6V11a7 7 0 1 0-14 0v5l-2 2v1h18v-1l-2-2Z" />
+                    </svg>
+                </a>
+
+                <button class="icon-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="sideNav">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Z" />
+                    </svg>
+
+                </button>
+
+
+            </nav>
+        </section>
+    </header>
+
+
+    <main class="page">
+        <section class="layout">
+
+            <section class="content">
+
+                <!-- PATIENT HEADER CARD -->
+                <section class="greeting">
+                    <h2 class="hello">John Smith</h2>
+                    <p class="subtle">
+                        ID: #12345 · 45 years old · Shoulder Rehabilitation
+                    </p>
+                </section>
+
+                <!-- CLINICAL STATUS (NEW - section 1) -->
+                <article class="patient-card primary">
+                    <header class="card-head">
+                        <h3 class="card-name">Clinical Status</h3>
+                        <span class="chat-badge" aria-hidden="true">🩺</span>
+                    </header>
+
+                    <p class="card-sub">
+                        Key indicators from the last 7 days
+                    </p>
+
+                    <dl class="metrics">
+                        <div class="m">
+                            <dt>Pain Level</dt>
+                            <dd class="trend improving">4/10 (↓)</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Range of Motion (Flexion)</dt>
+                            <dd>130° / Target 160°</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Adherence Rate</dt>
+                            <dd>82% (2 missed sessions)</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- PROGRESS CARD (existing but enhanced) -->
+                <article class="patient-card">
+                    <header class="section-head">
+                        <h3 class="section-title">Treatment Progress</h3>
+                        <a href="#" class="view-btn js-not-implemented" data-tip="Not implemented">
+                            visit Summaries
+                        </a>
+                    </header>
+
+                    <dl class="metrics">
+                        <div class="m">
+                            <dt>Completion</dt>
+                            <dd class="trend improving">78%</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Exercises Completed</dt>
+                            <dd>24</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Sessions Attended</dt>
+                            <dd>3</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Days Active</dt>
+                            <dd>10 / 12</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- OPERATIONAL / ADMIN (NEW - section 2) -->
+                <article class="patient-card">
+                    <header class="section-head">
+                        <h3 class="section-title">Care & Appointments</h3>
+                        <a href="#" class="view-btn js-not-implemented" data-tip="Not implemented">
+                            Manage
+                        </a>
+                    </header>
+
+                    <dl class="metrics">
+                        <div class="m">
+                            <dt>Assigned Therapist</dt>
+                            <dd>Dr. Emily Brown</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Last Visit</dt>
+                            <dd>May 12, 2025</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Next Appointment</dt>
+                            <dd>Tomorrow, 10:00 AM</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Treatment Phase</dt>
+                            <dd>Phase 2 – Strength & Stability</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- PATIENT DETAILS CARD (existing) -->
+                <article class="patient-card">
+                    <header class="section-head">
+                        <h3 class="section-title">Patient Information</h3>
+                    </header>
+
+                    <dl class="metrics">
+                        <div class="m">
+                            <dt>Patient ID</dt>
+                            <dd>#12345</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Date of Birth</dt>
+                            <dd>Jan 1, 1980</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Weight</dt>
+                            <dd>78 kg</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Treatment Area</dt>
+                            <dd>Shoulder</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <!-- PLAN CARD (existing) -->
+                <article class="patient-card">
+                    <header class="section-head">
+                        <h3 class="section-title">Treatment Plan</h3>
+                        <a href="#" class="view-btn js-not-implemented" data-tip="Not implemented">
+                            View Plan
+                        </a>
+                    </header>
+
+                    <dl class="metrics">
+                        <div class="m">
+                            <dt>Start Date</dt>
+                            <dd>Jan 1, 2025</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Duration</dt>
+                            <dd>30 days</dd>
+                        </div>
+
+                        <div class="m">
+                            <dt>Next Session</dt>
+                            <dd>Tomorrow, 10:00 AM</dd>
+                        </div>
+                    </dl>
+                </article>
+
+            </section>
+
+
+        </section>
+
+        <aside id="sideNav" class="side-nav" aria-hidden="true">
+            <nav class="side-menu">
+                <a href="physio-home.html">Home</a>
+                <a href="#" data-tip="Not implemented (demo)">Patients</a>
+                <a href="#" data-tip="Not implemented (demo)">Analytics</a>
+                <a href="#" data-tip="Not implemented (demo)">Chats</a>
+                <a href="#" data-tip="Not implemented (demo)">Search</a>
+            </nav>
+        </aside>
+
+        <div id="menuOverlay" class="overlay" hidden></div>
+    </main>
+
+    <footer class="flex-container-footer">
+        <a href="#" data-tip="Not implemented (demo)">About Us</a>
+        <a href="#" data-tip="Not implemented (demo)">Terms of Service</a>
+        <a href="#" data-tip="Not implemented (demo)">Privacy Policy</a>
+    </footer>
+
+</body>
+
+</html>
