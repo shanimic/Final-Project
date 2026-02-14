@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rehab360 | Patient Dashboard</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="patient-home/patient-home.css" />
+</head>
+<body class="page">
+  <header class="topbar" role="banner">
+    <div class="container container--fluid topbar__inner">
+      <div class="topbar__left">
+        <a class="brand" href="../index.html" aria-label="Back to welcome">
+          <img class="brand__logo" src="../assets/Group 94.svg" alt="Rehab360 logo" />
+        </a>
+        <div class="role-pill" aria-label="Current role">Patient</div>
+      </div>
+
+      <!-- Only show options that match the project's planned screens -->
+      <nav class="topnav" aria-label="Top navigation">
+        <a class="topnav__link" href="#summary">Home</a>
+        <button class="topnav__link" type="button" data-ui-only data-tip="Not implemented">My Treatment Plan</button>
+        <button class="topnav__link" type="button" data-ui-only data-tip="Not implemented">My Profile</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard dashboard--full" role="main">
+    <!-- Main column -->
+    <section class="dashboard__main" aria-label="Patient dashboard main content">
+      <header class="page-head">
+        <div>
+          <h1 class="h1">Hello Dana</h1>
+          <p class="muted">Here is a quick overview of your rehabilitation plan.</p>
+        </div>
+        <div class="page-head__meta">
+          <span class="meta-chip" id="todayDate" aria-label="Today date"></span>
+        </div>
+      </header>
+
+      <section id="summary" class="section" aria-labelledby="summaryTitle">
+        <h2 id="summaryTitle" class="h2">Overview</h2>
+
+        <div class="cards-3">
+          <!-- Card 1 -->
+          <article class="card card--status">
+            <header class="card__head">
+              <h3 class="h3">Today's plan status</h3>
+              <span class="badge" id="statusPercent">65%</span>
+            </header>
+            <p class="muted">2 of 3 exercises completed</p>
+            <div class="progress" aria-label="Plan completion progress">
+              <div class="progress__bar" id="progressBar" style="width: 65%;"></div>
+            </div>
+            <p class="small muted">Keep going - consistency matters.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card card--next">
+            <header class="card__head">
+              <h3 class="h3">Next Exercise</h3>
+              <span class="badge badge--soft">Today</span>
+            </header>
+            <p class="activity">
+              <span class="activity__title">Knee Push Up</span>
+              <span class="activity__meta">20 reps · Treatment plan</span>
+            </p>
+            <div class="card__actions">
+              <button class="btn btn--primary" type="button" data-ui-only data-tooltip="Not implemented">Start</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card card--pain">
+            <header class="card__head">
+              <h3 class="h3">Pain Trend</h3>
+              <span class="badge badge--warning" id="painLabel">Moderate</span>
+            </header>
+            <p class="muted">Last 7 days (mock indicator)</p>
+
+            <!-- Simple mini chart made with bars (no libraries) -->
+            <div class="spark" aria-label="Pain trend chart" role="img">
+              <span class="spark__bar" style="height: 40%"></span>
+              <span class="spark__bar" style="height: 55%"></span>
+              <span class="spark__bar" style="height: 50%"></span>
+              <span class="spark__bar" style="height: 60%"></span>
+              <span class="spark__bar" style="height: 58%"></span>
+              <span class="spark__bar" style="height: 48%"></span>
+              <span class="spark__bar" style="height: 45%"></span>
+            </div>
+
+            <div class="spark-axis" aria-hidden="true">
+              <span>S<br><strong>3</strong></span>
+              <span>M<br><strong>4</strong></span>
+              <span>T<br><strong>4</strong></span>
+              <span>W<br><strong>5</strong></span>
+              <span>T<br><strong>5</strong></span>
+              <span>F<br><strong>4</strong></span>
+              <span>S<br><strong>3</strong></span>
+            </div>
+
+            <p class="small muted" id="painNote">Stable trend — monitor after exercises.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- Right sidebar -->
+    <aside class="dashboard__side" aria-label="Notifications panel">
+      <section class="card" aria-labelledby="notifTitle">
+        <header class="card__head">
+          <h2 id="notifTitle" class="h2">Notifications</h2>
+          <span class="badge badge--soft" aria-label="Notification count">3</span>
+        </header>
+
+        <ul class="notif-list" aria-label="Notifications list">
+          <li class="notif">
+            <div class="notif__dot" aria-hidden="true"></div>
+            <div>
+              <p class="notif__title">New exercise added</p>
+              <p class="small muted">Knee Push Up was added to your plan.</p>
+            </div>
+          </li>
+          <li class="notif">
+            <div class="notif__dot" aria-hidden="true"></div>
+            <div>
+              <p class="notif__title">Physiotherapist reviewed your report</p>
+              <p class="small muted">Feedback is available in your report summary.</p>
+            </div>
+          </li>
+          <li class="notif">
+            <div class="notif__dot" aria-hidden="true"></div>
+            <div>
+              <p class="notif__title">Reminder</p>
+              <p class="small muted">Complete your final exercise to reach 100% today.</p>
+            </div>
+          </li>
+        
+          <li class="notif">
+            <div class="notif__dot" aria-hidden="true"></div>
+            <div>
+              <p class="notif__title">Your next session</p>
+              <p class="small muted">Tuesday 10:30 · Clinic visit with your physiotherapist.</p>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="card__actions">
+          <button class="btn btn--ghost" type="button" data-ui-only data-tooltip="Not implemented">View all</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+
+  <footer class="flex-container-footer">
+    <a href="#" data-tip="Not implemented">About Us</a>
+    <a href="#" data-tip="Not implemented">Terms of Service</a>
+    <a href="#" data-tip="Not implemented">Privacy Policy</a>
+  </footer>
+
+
+  <script src="../js/main.js"></script>
+  <script src="patient-home/patient-home.js"></script>
+</body>
+</html>

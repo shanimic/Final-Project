@@ -1,0 +1,298 @@
+/* Rehab360 - Global Design System (shared across pages) */
+
+:root{
+  --max: var(--container);
+  --line: var(--border);
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #2f7ef7;
+  --primary-weak: rgba(47, 126, 247, 0.12);
+  --warning: #f59e0b;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --container: 1280px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Full-width container for top bars (safe padding, no max width) */
+.container--fluid{
+  max-width: none;
+  width: 100%;
+  padding: 0 24px;
+}
+
+/* Typography scale */
+.h1{ font-size: 28px; margin: 0 0 6px; }
+.h2{ font-size: 18px; margin: 0 0 10px; }
+.h3{ font-size: 15px; margin: 0; }
+.small{ font-size: 12px; }
+.muted{ color: var(--muted); }
+
+/* Top bar */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(246, 248, 251, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.topbar__inner{
+  /* Slightly shorter header */
+  min-height: 54px;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* keep role pill close to the logo */
+}
+
+/* Left cluster: logo + role pill should stay together */
+.topbar__left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: auto; /* do not push the role pill away */
+}
+.brand__logo{
+  /* Responsive logo sizing (keep visible under 900px) */
+  height: clamp(52px, 5.2vw, 92px);
+  width: auto;
+  max-width: clamp(200px, 28vw, 280px); /* keep the role pill visually close */
+  display: block;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.brand__name{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.topbar__actions{ margin-left: auto; display: flex; align-items: center; gap: 10px; }
+
+.icon-btn{
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.role-pill{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* No breakpoint overrides for the logo (prevents sudden shrink at 900px) */
+
+.topnav{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 8px; /* keep some space from the far right edge */
+}
+.topnav__link{
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+}
+.topnav__link:hover{ background: var(--primary-weak); color: var(--text); }
+
+/* Card system */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.card__head{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.card__actions{ display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+
+.badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.badge--soft{ background: var(--primary-weak); border-color: rgba(47,126,247,0.2); color: #195bbf; }
+.badge--warning{ background: rgba(245, 158, 11, 0.14); border-color: rgba(245, 158, 11, 0.25); color: #8a5400; }
+
+/* Buttons */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn--primary{
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.btn--primary:hover{ filter: brightness(0.98); }
+.btn--secondary{
+  background: var(--primary-weak);
+  border-color: rgba(47,126,247,0.25);
+  color: #195bbf;
+}
+.btn--ghost{
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+}
+.btn--ghost:hover{ background: rgba(15, 23, 42, 0.04); color: var(--text); }
+
+/* Simple progress bar */
+.progress{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.progress__bar{ height: 100%; background: var(--primary); border-radius: 999px; }
+
+/* Toast (used for UI-only actions) */
+.toast{
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  max-width: min(520px, calc(100% - 24px));
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+.toast--show{ opacity: 1; }
+
+/* Hover tooltips (instead of toast) */
+[data-tip],
+[data-tooltip]{
+  position: relative;
+}
+
+[data-tip]:hover::after{
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 50;
+}
+
+[data-tooltip]:hover::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.92);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 50;
+}
+
+[data-tip]:hover::before,
+[data-tooltip]:hover::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(15, 23, 42, 0.92);
+  z-index: 50;
+}
+
+/* Footer sticks to bottom on short pages */
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page main{
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px){
+  .container{ padding: 0 16px; }
+  .brand{ min-width: auto; }
+  .h1{ font-size: 24px; }
+}
+
+@media (max-width: 600px){
+  .topnav{ display: none; } /* keep it clean on small screens */
+}

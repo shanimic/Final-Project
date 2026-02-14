@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rehab360 | Welcome</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="pages/welcome/welcome.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="container container--fluid topbar__inner">
+      <a class="brand" href="index.html" aria-label="Rehab360 home">
+        <img class="brand__logo" src="assets/Group 94.svg" alt="Rehab360 logo" />
+      </a>
+      <!-- No extra header actions needed for this project -->
+    </div>
+  </header>
+
+  <main class="welcome" role="main">
+    <section class="container welcome__card" aria-labelledby="welcomeTitle">
+      <header class="welcome__header">
+        <h1 id="welcomeTitle" class="h1">Choose your role</h1>
+</header>
+
+      <div class="role-grid" role="list">
+        <article class="role" role="listitem">
+          <h2 class="h2">Patient</h2>
+          <p class="muted">Track exercises, pain, and daily progress.</p>
+          <!-- Using a normal link keeps it simple (no real login). -->
+          <a class="btn btn--primary" href="pages/patient-home.html">Continue as Patient</a>
+        </article>
+
+        <article class="role" role="listitem">
+          <h2 class="h2">Physiotherapist</h2>
+          <p class="muted">Review reports and adjust rehabilitation plans.</p>
+          <!-- UI only: not implemented in this task -->
+          <button class="btn btn--secondary" type="button" data-ui-only data-tooltip="Physiotherapist Home (patient list) is not implemented yet">
+            Continue as Physiotherapist
+          </button>
+        </article>
+      </div>
+</section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="pages/welcome/welcome.js"></script>
+</body>
+</html>
