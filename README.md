@@ -37,7 +37,7 @@
 - `includes/` – עמודי HTML + `exercise_report.php`
 - `css/` – קבצי עיצוב
 - `js/` – קבצי JavaScript/jQuery
-- `images/` – תמונות/אייקונים
+- `images/` – תמונות/לוגו
 
 ---
 
