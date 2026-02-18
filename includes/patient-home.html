@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rehab360 | Patient Dashboard</title>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/patient-home.css" rel="stylesheet"/>
+</head>
+<body class="page">
+<header class="topbar" role="banner">
+<div class="container container--fluid topbar__inner">
+<div class="topbar__left">
+<a aria-label="Back to welcome" class="brand" href="../index.html">
+<img alt="Rehab360 logo" class="brand__logo" src="../images/logo.png"/>
+</a>
+<div aria-label="Current role" class="role-pill">Patient</div>
+</div>
+<nav aria-label="Top navigation" class="topnav">
+<a class="topnav__link" href="patient-home.html#summary">Home</a>
+<a class="topnav__link" href="patient-exercises.html">My Treatment Plan</a>
+<button class="topnav__link" data-tip="Not implemented" data-tip-pos="below" data-ui-only="" type="button">My Profile</button>
+</nav>
+</div>
+</header>
+<main class="dashboard dashboard--full" role="main">
+<section aria-label="Patient dashboard main content" class="dashboard__main">
+<header class="page-head">
+<div>
+<h1 class="h1">Hello John</h1>
+<p class="muted">Here is a quick overview of your rehabilitation plan.</p>
+</div>
+<div class="page-head__meta">
+<span aria-label="Today date" class="meta-chip" id="todayDate"></span>
+</div>
+</header>
+<section aria-labelledby="summaryTitle" class="section" id="summary">
+<h2 class="h2" id="summaryTitle">Overview</h2>
+<div class="cards-3">
+<article class="card card--status">
+<header class="card__head">
+<h3 class="h3">Today's plan status</h3>
+<span class="badge" id="statusPercent">65%</span>
+</header>
+<p class="muted">2 of 3 exercises completed</p>
+<div aria-label="Plan completion progress" class="progress">
+<div class="progress__bar" id="progressBar" style="width: 65%;"></div>
+</div>
+<p class="small muted">Keep going. Consistency matters.</p>
+</article>
+<article class="card card--next">
+<header class="card__head">
+<h3 class="h3">Next Exercise</h3>
+<span class="badge badge--soft">Today</span>
+</header>
+<p class="activity">
+<span class="activity__title" id="nextExerciseTitle">Band External Rotation</span>
+<span class="activity__meta" id="nextExerciseMeta">3 sets × 15 reps · Shoulder external rotation with resistance band</span>
+</p>
+<div class="card__actions">
+<a class="btn btn--primary" href="report-form.html" id="startNextExercise">Start</a>
+</div>
+</article>
+<article class="card card--pain">
+<header class="card__head">
+<h3 class="h3">Pain Trend</h3>
+</header>
+<p class="muted">Last 7 days (mock indicator)</p>
+<div aria-label="Pain trend chart" class="spark spark--pain" role="img">
+<span class="spark__bar" style="height: 40%"><span class="spark__val">3</span></span>
+<span class="spark__bar" style="height: 55%"><span class="spark__val">4</span></span>
+<span class="spark__bar" style="height: 50%"><span class="spark__val">4</span></span>
+<span class="spark__bar" style="height: 60%"><span class="spark__val">5</span></span>
+<span class="spark__bar" style="height: 58%"><span class="spark__val">5</span></span>
+<span class="spark__bar" style="height: 48%"><span class="spark__val">4</span></span>
+<span class="spark__bar" style="height: 45%"><span class="spark__val">3</span></span>
+</div>
+<div aria-hidden="true" class="spark-axis">
+<span>S</span>
+<span>M</span>
+<span>T</span>
+<span>W</span>
+<span>T</span>
+<span>F</span>
+<span>S</span>
+</div>
+<p class="small muted" id="painNote">Stable trend. Monitor after exercises.</p>
+</article>
+<article class="card card--effort">
+<header class="card__head">
+<h3 class="h3">Effort Trend</h3>
+</header>
+<p class="muted">Last 7 days (mock indicator)</p>
+<div aria-label="Effort trend chart" class="spark spark--effort" role="img">
+<span class="spark__bar" style="height: 45%"><span class="spark__val">4</span></span>
+<span class="spark__bar" style="height: 62%"><span class="spark__val">5</span></span>
+<span class="spark__bar" style="height: 58%"><span class="spark__val">5</span></span>
+<span class="spark__bar" style="height: 70%"><span class="spark__val">6</span></span>
+<span class="spark__bar" style="height: 68%"><span class="spark__val">6</span></span>
+<span class="spark__bar" style="height: 56%"><span class="spark__val">5</span></span>
+<span class="spark__bar" style="height: 50%"><span class="spark__val">4</span></span>
+</div>
+<div aria-hidden="true" class="spark-axis">
+<span>S</span>
+<span>M</span>
+<span>T</span>
+<span>W</span>
+<span>T</span>
+<span>F</span>
+<span>S</span>
+</div>
+<p class="small muted">Consistent effort. Keep the same pace.</p>
+</article>
+</div>
+</section>
+</section>
+<aside aria-label="Notifications panel" class="dashboard__side">
+<section aria-labelledby="notifTitle" class="card">
+<header class="card__head">
+<h2 class="h2" id="notifTitle">Notifications</h2>
+<span aria-label="Notification count" class="badge badge--soft">7</span>
+</header>
+<ul aria-label="Notifications list" class="notif-list">
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">New exercise added</p>
+<p class="small muted">Knee Push Up was added to your plan.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">Physiotherapist reviewed your report</p>
+<p class="small muted">Feedback is available in your report summary.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">Reminder</p>
+<p class="small muted">Complete your final exercise to reach 100% today.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">Your next session</p>
+<p class="small muted">Tuesday 10:30 · Clinic visit with your physiotherapist.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">New message</p>
+<p class="small muted">Your physiotherapist sent a short note about your form.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">Weekly summary ready</p>
+<p class="small muted">Check your progress for the last 7 days.</p>
+</div>
+</li>
+<li class="notif">
+<div aria-hidden="true" class="notif__dot"></div>
+<div>
+<p class="notif__title">Tip</p>
+<p class="small muted">Warm up 3–5 minutes before strengthening exercises.</p>
+</div>
+</li>
+</ul>
+<div class="card__actions">
+<button class="btn btn--ghost" data-tooltip="Not implemented" data-ui-only="" type="button">View all</button>
+</div>
+</section>
+</aside>
+</main>
+<nav aria-label="Bottom navigation" class="bottom-nav">
+<a aria-label="Home" class="tab active" href="patient-home.html">Home</a>
+<a aria-label="My Treatment Plan" class="tab" href="patient-exercises.html">My Treatment Plan</a>
+<button aria-label="My Profile" class="tab" data-tip="Not implemented" data-ui-only="" type="button">My Profile</button>
+</nav>
+<footer class="flex-container-footer">
+  <button class="footer-link" type="button" data-tip="Not implemented">About Us</button>
+  <button class="footer-link" type="button" data-tip="Not implemented">Terms of Service</button>
+  <button class="footer-link" type="button" data-tip="Not implemented">Privacy Policy</button>
+</footer>
+<script src="../js/patient-home.js"></script>
+</body>
+</html>

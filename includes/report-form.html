@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rehab360 | Exercise Report</title>
+
+      <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/report-form.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script defer src="../js/form.js"></script>
+
+</head>
+
+<body data-page="exercise-report" class="page">
+
+<header class="topbar" role="banner">
+    <div class="container container--fluid topbar__inner">
+      <div class="topbar__left">
+        <a class="brand" href="../index.html" aria-label="Back to welcome">
+          <img class="brand__logo" src="../images/logo.png" alt="Rehab360 logo" />
+        </a>
+        <div class="role-pill" aria-label="Current role">Patient</div>
+      </div>
+
+      <nav class="topnav" aria-label="Top navigation">
+        <a class="topnav__link" href="patient-home.html#summary">Home</a>
+        <a class="topnav__link" href="patient-exercises.html">My Treatment Plan</a>
+        <button class="topnav__link" type="button" data-ui-only data-tip="Not implemented" data-tip-pos="below">My Profile</button>
+      </nav>
+    </div>
+  </header>
+
+<main class="page">
+<section class="layout">
+<section class="content">
+
+<div class="exercise-header-row">
+  <a id="backBtn" class="back-btn back-btn--outside" href="patient-exercises.html" aria-label="Back to exercises"><strong aria-hidden="true">←</strong></a>
+
+  <header class="greeting">
+    <h2 class="hello" id="exerciseTitle"></h2>
+    <p class="subtle" id="exerciseDetails"></p>
+  </header>
+</div>
+
+
+
+
+<section class="report-layout">
+
+<section class="report-section">
+
+<form id="exerciseReportForm"
+      class="report-form"
+      method="POST"
+      action="exercise_report.php">
+
+<input type="hidden" name="user_id" value="1">
+<input type="hidden" id="exerciseId" name="exercise_id" value="">
+
+<div class="field-group">
+<label>Did you complete the exercise?</label>
+<div class="radio-group">
+<label>
+<input type="radio" name="completed" value="1" checked required>
+Completed
+</label>
+
+<label>
+<input type="radio" name="completed" value="0">
+Not Completed
+</label>
+</div>
+</div>
+
+<div id="completedFields">
+
+<div class="field-group">
+<label>Pain Level </label>
+<input type="number" id="pain" name="pain" min="0" max="10">
+</div>
+
+<div class="field-group">
+<label>Effort Level </label>
+<input type="number" id="effort" name="effort" min="1" max="10">
+</div>
+
+<div class="field-group">
+<label>Notes for your physiotherapist</label>
+<textarea id="notes" name="notes" rows="3" minlength="5"></textarea>
+</div>
+
+</div>
+
+<div id="notCompletedFields" style="display:none;">
+
+<div class="field-group">
+<label>Reason for not completing</label>
+<select id="reasonSelect" name="reason">
+<option value="">Select reason</option>
+<option value="pain">Pain was too high</option>
+<option value="time">No time</option>
+<option value="forgot">Forgot</option>
+<option value="unwell">Felt unwell</option>
+<option value="other">Other</option>
+</select>
+</div>
+
+<div class="field-group" id="otherReasonGroup" style="display:none;">
+<label>Please explain</label>
+<textarea id="reasonText" name="reasonText" rows="3" minlength="5"></textarea>
+</div>
+
+
+</div>
+
+<div class="submit-row">
+  <p id="formMessage" aria-live="polite"></p>
+  <button type="submit" class="save-btn">Save Report</button>
+</div>
+
+</form>
+
+</section>
+
+<section id="exerciseVideoSection" class="exercise-video video-card" hidden>
+  <div class="video-card__head">
+    <h3 class="video-card__title">Exercise Video</h3>
+</div>
+  <div class="video-embed">
+    <iframe id="exerciseVideo" title="Exercise video" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</section>
+
+</section>
+
+</section>
+</section>
+</main>
+
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <a class="tab " href="patient-home.html" aria-label="Home">Home</a>
+    <a class="tab active" href="patient-exercises.html" aria-label="My Treatment Plan">My Treatment Plan</a>
+    <button class="tab" type="button" data-ui-only data-tip="Not implemented" aria-label="My Profile">My Profile</button>
+  </nav>
+
+
+</body>
+</html>

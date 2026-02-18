@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rehab360 | Patient Details</title>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/physio.css" rel="stylesheet"/>
+</head>
+<body data-page="patient-details">
+<header class="topbar" role="banner">
+<div class="container container--fluid topbar__inner">
+<div class="topbar__left">
+<a aria-label="Back to welcome" class="brand" href="../index.html">
+<img alt="Rehab360 logo" class="brand__logo" src="../images/logo.png"/>
+</a>
+<div aria-label="Current role" class="role-pill">Physiotherapist</div>
+</div>
+<nav aria-label="Top navigation" class="topnav">
+<a class="topnav__link" href="physio-home.html">Home</a>
+<button class="topnav__link" data-tip="Not implemented" data-ui-only="" type="button">My Patients</button>
+<button class="topnav__link" data-tip="Not implemented" data-tip-pos="below" data-ui-only="" type="button">My Profile</button>
+</nav>
+<button aria-controls="sideNav" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" id="menuToggle" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Z"></path>
+</svg>
+</button>
+</div>
+</header>
+<main class="page">
+<section class="layout">
+<section class="content">
+<section class="greeting-card">
+<h2 class="hello">John Smith</h2>
+<p class="subtle">
+                        ID: #12345 · 45 years old · Shoulder Rehabilitation
+                    </p>
+</section>
+<article class="patient-card">
+<header class="card-head">
+<h3 class="card-name">Clinical Status</h3>
+</header>
+<p class="card-sub">
+                        Key indicators from the last 7 days
+                    </p>
+<dl class="metrics">
+<div class="m">
+<dt>Pain Level</dt>
+<dd class="trend improving">6/10 </dd>
+</div>
+<div class="m">
+<dt>Range of Motion (Flexion)</dt>
+<dd>130° / Target 160°</dd>
+</div>
+</dl>
+</article>
+<article class="patient-card">
+<header class="section-head">
+<h3 class="section-title">Patient Information</h3>
+</header>
+<dl class="metrics">
+<div class="m">
+<dt>Patient ID</dt>
+<dd>#12345</dd>
+</div>
+<div class="m">
+<dt>Date of Birth</dt>
+<dd>Jan 1, 1980</dd>
+</div>
+<div class="m">
+<dt>Weight</dt>
+<dd>78 kg</dd>
+</div>
+<div class="m">
+<dt>Treatment Area</dt>
+<dd>Shoulder</dd>
+</div>
+</dl>
+</article>
+<article class="patient-card">
+<header class="section-head">
+<h3 class="section-title">Treatment Plan</h3>
+<button class="view-btn js-not-implemented" data-tip="Not implemented" type="button">View Plan</button>
+</header>
+<dl class="metrics">
+<div class="m">
+<dt>Start Date</dt>
+<dd>Jan 1, 2025</dd>
+</div>
+<div class="m">
+<dt>Duration</dt>
+<dd>30 days</dd>
+</div>
+<div class="m">
+<dt>Next Session</dt>
+<dd>Tomorrow, 10:00 AM</dd>
+</div>
+</dl>
+</article>
+<article class="patient-card">
+<header class="section-head">
+<h3 class="section-title">Treatment Progress</h3>
+<button class="view-btn js-not-implemented" data-tip="Not implemented" type="button">visit Summaries</button>
+</header>
+<dl class="metrics">
+<div class="m">
+<dt>Completion</dt>
+<dd class="trend improving">78%</dd>
+</div>
+<div class="m">
+<dt>Exercises Completed</dt>
+<dd>24</dd>
+</div>
+<div class="m">
+<dt>Sessions Attended</dt>
+<dd>3</dd>
+</div>
+<div class="m">
+<dt>Days Active</dt>
+<dd>10 / 12</dd>
+</div>
+</dl>
+</article>
+<article class="patient-card">
+<header class="section-head">
+<h3 class="section-title">Care &amp; Appointments</h3>
+<button class="view-btn js-not-implemented" data-tip="Not implemented" type="button">Manage</button>
+</header>
+<dl class="metrics">
+<div class="m">
+<dt>Assigned Therapist</dt>
+<dd>Dr. Emily Brown</dd>
+</div>
+<div class="m">
+<dt>Last Visit</dt>
+<dd>May 12, 2025</dd>
+</div>
+<div class="m">
+<dt>Next Appointment</dt>
+<dd>Tomorrow, 10:00 AM</dd>
+</div>
+<div class="m">
+<dt>Treatment Phase</dt>
+<dd>Phase 2 – Strength &amp; Stability</dd>
+</div>
+</dl>
+</article>
+</section>
+</section>
+</main>
+<nav aria-label="Bottom navigation" class="bottom-nav">
+<a aria-label="Home" class="tab" href="physio-home.html">Home</a>
+<button aria-label="My Patients" class="tab" data-tip="Not implemented" data-ui-only="" type="button">My Patients</button>
+<button aria-label="My Profile" class="tab" data-tip="Not implemented" data-ui-only="" type="button">My Profile</button>
+</nav>
+<footer class="flex-container-footer">
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">About Us</button>
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">Terms of Service</button>
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">Privacy Policy</button>
+</footer>
+</body>
+<script src="../js/physio.js"></script>
+</html>

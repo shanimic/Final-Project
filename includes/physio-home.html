@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Rehab360 | Physio Home</title>
+<link href="../css/global.css" rel="stylesheet"/>
+<link href="../css/physio.css" rel="stylesheet"/>
+</head>
+<body data-page="physio-home">
+<header class="topbar" role="banner">
+<div class="container container--fluid topbar__inner">
+<div class="topbar__left">
+<a aria-label="Back to welcome" class="brand" href="../index.html">
+<img alt="Rehab360 logo" class="brand__logo" src="../images/logo.png"/>
+</a>
+<div aria-label="Current role" class="role-pill">Physiotherapist</div>
+</div>
+<nav aria-label="Top navigation" class="topnav">
+<a class="topnav__link" href="physio-home.html">Home</a>
+<button class="topnav__link" data-tip="Not implemented" data-ui-only="" type="button">My Patients</button>
+<button class="topnav__link" data-tip="Not implemented" data-tip-pos="below" data-ui-only="" type="button">My Profile</button>
+</nav>
+<button aria-controls="sideNav" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" id="menuToggle" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M4 7h16v2H4V7Zm0 8h16v2H4v-2Z"></path>
+</svg>
+</button>
+</div>
+</header>
+<main class="page" id="main">
+<section aria-label="Page layout" class="layout">
+<section aria-label="Physio dashboard content" class="content">
+<header aria-label="Greeting" class="greeting">
+<h2 class="hello">Hello <span id="doctorName">Dr.Cohen</span></h2>
+</header>
+<section aria-label="Dashboard summary" class="kpi-section">
+<header>
+<h3 class="section-title">Overview</h3>
+</header>
+<section class="kpi-grid">
+<article class="kpi-card">
+<h4>Active Patients</h4>
+<p class="kpi-value">4</p>
+</article>
+<article class="kpi-card">
+<h4>Overdue Reports</h4>
+<p class="kpi-value">1</p>
+</article>
+<article class="kpi-card">
+<h4>Avg Compliance</h4>
+<p class="kpi-value">78%</p>
+</article>
+<article class="kpi-card">
+<h4>Pain Alerts</h4>
+<p class="kpi-value">2</p>
+</article>
+</section>
+</section>
+<section aria-label="Attention required" class="alerts-section">
+<header>
+<h3 class="section-title">Attention Required</h3>
+</header>
+<section aria-label="Alerts list" class="alerts" id="alertsList">
+<article class="alert">
+<p class="alert-text">Dana L. | pain increased (4 → 6)</p>
+<button class="view-btn" data-action="view-alert" data-patient="Dana L." data-tip="Not implemented " type="button">View</button>
+</article>
+<article class="alert">
+<p class="alert-text">Ron K. | no exercise report for 3 days</p>
+<button class="view-btn" data-action="view-alert" data-patient="Ron K." data-tip="Not implemented" type="button">View</button>
+</article>
+</section>
+</section>
+<section aria-label="Today's sessions" class="sessions-section">
+<header>
+<h3 class="section-title">Today's Sessions</h3>
+</header>
+<section class="sessions-list">
+<article class="session-card" id="johnCard">
+<time datetime="10:00">10:00</time>
+<p>John Smith</p>
+</article>
+<article class="session-card">
+<time datetime="12:30">12:30</time>
+<p>Dana Lopez</p>
+</article>
+<article class="session-card">
+<time datetime="15:00">15:00</time>
+<p>Ron K.</p>
+</article>
+</section>
+</section>
+<section aria-label="Patients overview" class="patients-section">
+<header class="section-head">
+<h3 class="section-title">Patients overview</h3>
+<form action="#" aria-label="Search patients" class="search" onsubmit="return false;" role="search">
+<label class="search-label" for="patientSearch">Search patient</label>
+<input id="patientSearch" name="patientSearch" placeholder="Search patient..." type="search"/>
+</form>
+</header>
+<div class="cards-navigation">
+<button aria-label="Previous patients" class="nav-arrow nav-arrow-left" data-tip="Not implemented (demo)" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+</svg>
+</button>
+<section aria-label="Patients cards" class="cards" id="patientsGrid">
+<article class="patient-card primary" data-action="open-patient" data-patient="John Smith" data-program="Shoulder Rehabilitation">
+<header class="card-head">
+<h4 class="card-name">John Smith</h4>
+<p class="card-sub">Shoulder Rehabilitation</p>
+</header>
+<dl class="metrics">
+<section class="m">
+<dt>Weekly compliance:</dt>
+<dd>82%</dd>
+</section>
+<section class="m">
+<dt>Pain trend:</dt>
+<dd class="trend improving">
+<span aria-hidden="true" class="trend-icon"></span>
+                                            Improving
+                                        </dd>
+</section>
+<section class="m">
+<dt>Last report:</dt>
+<dd>2 hours ago</dd>
+</section>
+</dl>
+</article>
+<article class="patient-card" data-patient="Dana Lopez" data-program="Knee Rehabilitation" data-tip="Not implemented" data-ui-only="">
+<header class="card-head">
+<h4 class="card-name">Dana Lopez</h4>
+<p class="card-sub">Knee Rehabilitation</p>
+</header>
+<dl class="metrics">
+<section class="m">
+<dt>Weekly compliance:</dt>
+<dd>65%</dd>
+</section>
+<section class="m">
+<dt>Pain trend:</dt>
+<dd class="m">Stable</dd>
+</section>
+<section class="m">
+<dt>Last report:</dt>
+<dd>1 day ago</dd>
+</section>
+</dl>
+</article>
+</section>
+<button aria-label="Next patients" class="nav-arrow nav-arrow-right" data-tip="Not implemented (demo)" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+</svg>
+</button>
+</div>
+</section>
+</section>
+<div class="overlay" hidden="" id="menuOverlay"></div>
+</section>
+</main>
+<div aria-live="polite" id="toast" role="status"></div>
+<nav aria-label="Bottom navigation" class="bottom-nav">
+<a aria-label="Home" class="tab active" href="physio-home.html">Home</a>
+<button aria-label="My Patients" class="tab" data-tip="Not implemented" data-ui-only="" type="button">My Patients</button>
+<button aria-label="My Profile" class="tab" data-tip="Not implemented" data-ui-only="" type="button">My Profile</button>
+</nav>
+<footer class="flex-container-footer">
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">About Us</button>
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">Terms of Service</button>
+  <button class="footer-link" type="button" data-tip="Not implemented (demo)">Privacy Policy</button>
+</footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../js/physio.js"></script>
+</html>

@@ -1,0 +1,217 @@
+
+.dashboard{
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-template-areas: "main side";
+  gap: 18px;
+  align-items: stretch;
+}
+
+.dashboard__main{
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#summary.section{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-head{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.meta-chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.section{ margin-top: 18px; }
+
+.cards-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "status next"
+    "pain   effort";
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+  flex: 1;
+}
+
+.card--status{ grid-area: status; }
+.card--next{ grid-area: next; }
+.card--pain{ grid-area: pain; }
+.card--effort{ grid-area: effort; }
+
+.card--pain,
+.card--effort{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--pain .card__actions,
+.card--effort .card__actions{ margin-top: auto; }
+
+.activity{ margin: 0; display: grid; gap: 4px; }
+.activity__title{ font-weight: 700; }
+.activity__meta{ color: var(--muted); font-size: 13px; }
+
+.actions{ display: flex; gap: 12px; flex-wrap: wrap; }
+
+.spark{
+  flex: 1;
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  align-items: end;
+  margin-top: 8px;
+}
+
+.spark--effort .spark__bar{
+  background: rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+.spark__bar{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(47, 126, 247, 0.25);
+  border: 1px solid rgba(47, 126, 247, 0.25);
+  border-radius: 10px;
+  padding-bottom: 8px;
+}
+
+.spark__val{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+}
+
+.notif-list{ list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 10px; }
+.notif{ display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start; padding: 10px; border-radius: 14px; border: 1px solid rgba(15, 23, 42, 0.06); background: rgba(15, 23, 42, 0.02); }
+.notif__dot{ width: 10px; height: 10px; border-radius: 999px; background: var(--primary); margin-top: 5px; }
+.notif__title{ margin: 0; font-weight: 700; font-size: 13px; }
+
+@media (max-width: 1100px){
+  .cards-3{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "status"
+      "next"
+      "pain"
+      "effort";
+    grid-template-rows: auto auto auto auto;
+  }
+}
+
+@media (max-width: 900px){
+  .dashboard{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "side"
+      "main";
+  }
+
+  .meta-chip{
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .dashboard__side > .card{ height: auto; }
+  .dashboard__side .notif-list{ overflow: visible; }
+}
+
+.dashboard__side{
+  grid-area: side;
+  display: flex;
+}
+.dashboard__side > .card{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard__side .notif-list{
+  flex: 1;
+  overflow: auto;
+  padding-right: 6px;
+}
+.dashboard__side .card__actions{
+  margin-top: auto;
+}
+
+
+.dashboard--full{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 22px 24px 40px;
+}
+
+@media (max-width: 900px){
+  .dashboard--full{ padding: 18px 16px 34px; }
+}
+
+
+.spark-axis{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.spark-axis strong{ color: var(--text); font-weight: 700; }
+
+
+
+.flex-container-footer {
+  width: min(var(--max), 94vw);
+  margin: 16px auto 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.flex-container-footer a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.flex-container-footer a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .flex-container-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
