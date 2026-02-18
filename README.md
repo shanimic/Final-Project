@@ -26,7 +26,9 @@
 ---
 
 ##  איך מריצים
-**כתובת השרת :** `shanimi2.mtacloud.co.il`
+**כתובת השרת :** `[shanimi2.mtacloud.co.il](https://shanimi2.mtacloud.co.il/final%20project/
+
+)`
 
 ---
 
