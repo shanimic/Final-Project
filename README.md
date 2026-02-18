@@ -37,7 +37,7 @@
 
 ---
 
-##  מבנה תיקיות (בקיצור)
+##  מבנה תיקיות 
 - `index.html`
 - `includes/` – עמודי HTML + `exercise_report.php`
 - `css/` – קבצי עיצוב
